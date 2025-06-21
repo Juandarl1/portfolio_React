@@ -10,11 +10,16 @@ function App() {
     <>
       <div className="App">
         <header className="App-header">
-          <contanier>
-            <Navbar />
-            <h1>Welcome to the React App</h1>
+           <Navbar />
+          <contanier className="App-image">
+            <h1>Photo presentation?</h1>
             <p>This is a simple React application.</p>
           </contanier>
+          <container className="App-content">
+            <p>Welcome to the React app!</p>
+            <p>This is a simple example of a React application with a navbar.</p>
+            <p>You can add more components and styles as needed.</p>
+          </container>
         </header>
       </div>
     </>
