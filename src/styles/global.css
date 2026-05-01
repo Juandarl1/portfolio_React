@@ -180,6 +180,13 @@ body {
     }
 }
 
+.hero-buttons{
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+
 .hero-badge {
     display: inline-block;
     background: rgba(99, 102, 241, 0.2);
