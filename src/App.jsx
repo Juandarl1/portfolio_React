@@ -27,7 +27,7 @@ function App() {
     </nav>
 
 
-
+        {/* hero-section */}
        <section className="hero">
       <div className="hero-content">
         <h1>
@@ -45,9 +45,15 @@ function App() {
             <a href="#experiencia" className="btn btn-secondary">Mi experiencia</a>
           </div>
 
+        
+
+        
         </h1>
       </div>
     </section>
+
+        
+        
 
         {/* <!-- About Section --> */}
     <section id="sobre-mi" class="section about">
