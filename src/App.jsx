@@ -2,7 +2,6 @@
 
 // import './App.css'
 import './styles/global.css'
-import { Analytics } from "@vercel/analytics/next"
 
 // import {NavBar} from './components/NavBar'
 
@@ -12,7 +11,7 @@ function App() {
 
   return (
     <>
-      <Analytics />
+
       {/* <NavBar /> */}
     <nav className="nav">
         <div class="nav-container">
