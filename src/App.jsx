@@ -1,6 +1,5 @@
 // import { useState } from 'react'
 
-// import './App.css'
 import './styles/global.css'
 
 // import {NavBar} from './components/NavBar'
@@ -44,10 +43,6 @@ function App() {
             <a href="#contacto" className="btn btn-primary">Contáctame</a>
             <a href="#experiencia" className="btn btn-secondary">Mi experiencia</a>
           </div>
-
-        
-
-        
         </h1>
       </div>
     </section>
