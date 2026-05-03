@@ -2,7 +2,7 @@
 
 import './styles/global.css'
 
-// import {NavBar} from './components/NavBar'
+// import {NavBar} from '../components/NavBar'
 
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
     <>
 
       {/* <NavBar /> */}
+
     <nav className="nav">
         <div class="nav-container">
             <div class="nav-brand">JDR</div>
@@ -87,7 +88,7 @@ function App() {
         </div>
     </section>
 
-
+    {/* Experience Section */}
     <section id="experiencia" class="section experience">
         <div class="container">
             <h2 class="section-title">Experiencia</h2>
@@ -143,6 +144,161 @@ function App() {
         </div>
     </section>
 
+    {/* Education section */}
+    <section id="educacion" className="section education">
+        <div className="container">
+            <h2 class="section-title">Educación</h2>
+            <div className="education-grid">
+                <div className="education-card">
+                    <div className="education-icon">🎓</div>
+                    <div className="education-content">
+                        <h3 className="education-title">Ingeniería de Software</h3>
+                        <div className="education-institution">Institución Universitaria Pascual Bravo</div>
+                        <div className="education-date">Culminado Agosto 2024</div>
+                    </div>
+                </div>
+
+                <div className="education-card">
+                    <div className="education-icon">💻</div>
+                    <div className="education-content">
+                        <h3 className="education-title">Tecnología en Desarrollo de Software</h3>
+                        <div className="education-institution">Institución Universitaria Pascual Bravo</div>
+                        <div className="education-date">Culminado Agosto 2021</div>
+                    </div>
+                </div>
+
+                <div className="education-card">
+                    <div className="education-icon">📚</div>
+                    <div className="education-content">
+                        <h3 className="education-title">Máster en SQL Server: Desde Cero a Profesional</h3>
+                        <div className="education-institution">Udemy</div>
+                        <div className="education-date">Culminado Enero 2026</div>
+
+                    <div className='certification-link'>
+                        <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-25145c90-9a3c-40d6-b2f8-ed32b61a2002.jpg" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">Ver certificado</a>
+                    </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    {/* Habilidades Section */}
+     <section id="habilidades" className="section skills">
+        <div className="container">
+            <h2 className="section-title">Habilidades</h2>
+            <div className="skills-grid">
+                <div className="skill-category">
+                    <h3 className="skill-category-title">Lenguajes & Frameworks</h3>
+                    <div className="skill-list">
+                        <div className="skill-item">
+                            <div className="skill-header">
+                                <span className="skill-name">SQL Server</span>
+                                <span className="skill-level">Intermedio</span>
+                            </div>
+                            <div className="skill-bar">
+                                <div className="skill-progress" style={{ width: '70%' }}></div>
+                            </div>
+                        </div>
+                        <div className="skill-item">
+                            <div className="skill-header">
+                                <span className="skill-name">C#</span>
+                                <span className="skill-level">Básico</span>
+                            </div>
+                            <div className="skill-bar">
+                                <div className="skill-progress" style={{ width: '50%' }}></div>
+                            </div>
+                        </div>
+                        <div className="skill-item">
+                            <div className="skill-header">
+                                <span className="skill-name">Python</span>
+                                <span className="skill-level">Básico</span>
+                            </div>
+                            <div className="skill-bar">
+                                <div className="skill-progress" style={{ width: '50%' }}></div>
+                            </div>
+                        </div>
+                        <div className="skill-item">
+                            <div className="skill-header">
+                                <span className="skill-name">JavaScript</span>
+                                <span className="skill-level">Básico</span>
+                            </div>
+                            <div className="skill-bar">
+                                <div className="skill-progress" style={{ width: '50%' }}></div>
+                            </div>
+                        </div>
+                        <div className="skill-item">
+                            <div className="skill-header">
+                                <span className="skill-name">React</span>
+                                <span className="skill-level">Básico</span>
+                            </div>
+                            <div className="skill-bar">
+                                <div className="skill-progress" style={{ width: '45%' }}></div>
+                            </div>
+                        </div>
+                        <div className="skill-item">
+                            <div className="skill-header">
+                                <span className="skill-name">Angular</span>
+                                <span className="skill-level">Aprendiendo</span>
+                            </div>
+                            <div className="skill-bar">
+                                <div className="skill-progress" style={{ width: '30%' }}></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="skill-category">
+                    <h3 className="skill-category-title">Habilidades Blandas</h3>
+                    <div className="soft-skills">
+                        <div className="soft-skill-card">
+                            <div className="soft-skill-icon">🤝</div>
+                            <div className="soft-skill-name">Trabajo en equipo</div>
+                        </div>
+                        <div className="soft-skill-card">
+                            <div className="soft-skill-icon">💪</div>
+                            <div className="soft-skill-name">Resiliente</div>
+                        </div>
+                        <div className="soft-skill-card">
+                            <div className="soft-skill-icon">⚡</div>
+                            <div className="soft-skill-name">Trabajo bajo presión</div>
+                        </div>
+                        <div className="soft-skill-card">
+                            <div className="soft-skill-icon">💬</div>
+                            <div className="soft-skill-name">Comunicación asertiva</div>
+                        </div>
+                        <div className="soft-skill-card">
+                            <div className="soft-skill-icon">👥</div>
+                            <div className="soft-skill-name">Relaciones interpersonales</div>
+                        </div>
+                        <div className="soft-skill-card">
+                            <div className="soft-skill-icon">🔧</div>
+                            <div className="soft-skill-name">Conocimiento técnico</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="skill-category">
+                    <h3 className="skill-category-title">Idiomas</h3>
+                    <div className="languages">
+                        <div className="language-item">
+                            <span className="language-name">Español</span>
+                            <span className="language-level">Nativo</span>
+                        </div>
+                        <div className="language-item">
+                            <span className="language-name">Inglés</span>
+                            <span className="language-level">Intermedio (B1)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     </>
