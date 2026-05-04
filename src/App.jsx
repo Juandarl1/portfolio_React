@@ -14,14 +14,14 @@ function App() {
       {/* <NavBar /> */}
 
     <nav className="nav">
-        <div class="nav-container">
-            <div class="nav-brand">JDR</div>
-            <div class="nav-links">
-                <a href="#sobre-mi" class="nav-link">Sobre mí</a>
-                <a href="#experiencia" class="nav-link">Experiencia</a>
-                <a href="#habilidades" class="nav-link">Habilidades</a>
-                <a href="#educacion" class="nav-link">Educación</a>
-                <a href="#contacto" class="nav-link nav-link-cta">Contacto</a>
+        <div className="nav-container">
+            <div className="nav-brand">JDRL</div>
+            <div className="nav-links">
+                <a href="#sobre-mi" className="nav-link">Sobre mí</a>
+                <a href="#experiencia" className="nav-link">Experiencia</a>
+                <a href="#habilidades" className="nav-link">Habilidades</a>
+                <a href="#educacion" className="nav-link">Educación</a>
+                <a href="#contacto" className="nav-link nav-link-cta">Contacto</a>
             </div>
         </div>
     </nav>
@@ -30,6 +30,7 @@ function App() {
         {/* hero-section */}
        <section className="hero">
       <div className="hero-content">
+        <div className="hero-badge">Disponible para oportunidades</div>
         <h1>
           Hola, soy <span className="highlight">Juan David</span>
           <br />
