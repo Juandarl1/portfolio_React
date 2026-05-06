@@ -1,4 +1,4 @@
-// import { useState } from 'react'
+import { useEffect } from 'react'
 
 import './styles/global.css'
 
@@ -7,6 +7,120 @@ import './styles/global.css'
 
 function App() {
   // const [count, setCount] = useState(0)
+
+     useEffect(() => {
+ 
+    // 1. Smooth scroll con offset para el navbar fijo
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+        const target = document.querySelector(this.getAttribute('href'))
+        if (target) {
+          const offsetTop = target.offsetTop - 80
+          window.scrollTo({ top: offsetTop, behavior: 'smooth' })
+        }
+      })
+    })
+ 
+    // 2. Animación de barras de habilidades al hacer scroll
+    const observerOptions = {
+      threshold: 0.5,
+      rootMargin: '0px'
+    }
+ 
+    const animateSkillBars = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const skillBars = entry.target.querySelectorAll('.skill-progress')
+          skillBars.forEach(bar => {
+            const width = bar.style.width
+            bar.style.width = '0%'
+            setTimeout(() => { bar.style.width = width }, 100)
+          })
+          observer.unobserve(entry.target)
+        }
+      })
+    }
+ 
+    const skillsSection = document.querySelector('.skills')
+    let skillsObserver = null
+    if (skillsSection) {
+      skillsObserver = new IntersectionObserver(animateSkillBars, observerOptions)
+      skillsObserver.observe(skillsSection)
+    }
+ 
+    // 3. Animación fade-up de tarjetas y timeline al hacer scroll
+    const animateOnScroll = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1'
+          entry.target.style.transform = 'translateY(0)'
+        }
+      })
+    }
+ 
+    const scrollAnimateElements = document.querySelectorAll(
+      '.timeline-item, .education-card, .stat-card'
+    )
+    scrollAnimateElements.forEach(el => {
+      el.style.opacity = '0'
+      el.style.transform = 'translateY(30px)'
+      el.style.transition = 'all 0.6s ease-out'
+    })
+ 
+    const scrollObserver = new IntersectionObserver(animateOnScroll, observerOptions)
+    scrollAnimateElements.forEach(el => scrollObserver.observe(el))
+ 
+    // 4. Nav link activo según la sección visible
+    const sections = document.querySelectorAll('section[id]')
+    const navLinks = document.querySelectorAll('.nav-link')
+ 
+    const setActiveNav = () => {
+      const scrollY = window.pageYOffset
+      sections.forEach(section => {
+        const sectionHeight = section.offsetHeight
+        const sectionTop = section.offsetTop - 100
+        const sectionId = section.getAttribute('id')
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          navLinks.forEach(link => {
+            link.classList.remove('active')
+            if (link.getAttribute('href') === `#${sectionId}`) {
+              link.classList.add('active')
+            }
+          })
+        }
+      })
+    }
+ 
+    window.addEventListener('scroll', setActiveNav)
+ 
+    // 5. Sombra del navbar al hacer scroll
+    const nav = document.querySelector('.nav')
+    const handleNavShadow = () => {
+      if (nav) {
+        nav.style.boxShadow = window.scrollY > 50
+          ? '0 4px 20px rgba(0, 0, 0, 0.1)'
+          : 'none'
+      }
+    }
+ 
+    window.addEventListener('scroll', handleNavShadow)
+ 
+    console.log('Portfolio loaded successfully! 🚀')
+ 
+    // Cleanup: remueve los listeners cuando el componente se desmonte
+    return () => {
+      window.removeEventListener('scroll', setActiveNav)
+      window.removeEventListener('scroll', handleNavShadow)
+      if (skillsObserver && skillsSection) {
+        skillsObserver.unobserve(skillsSection)
+      }
+    }
+ 
+  }, [])
+
+
+
 
   return (
     <>
