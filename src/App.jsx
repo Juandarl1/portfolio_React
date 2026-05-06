@@ -178,8 +178,8 @@ function App() {
         
         
 
-        {/* <!-- About Section --> */}
-    <section id="sobre-mi" class="section about">
+    {/* About Section */}
+    <section id="sobre-mi" className="section about">
         <div class="container">
             <h2 class="section-title">Sobre mí</h2>
             <div class="about-content">
@@ -435,7 +435,7 @@ function App() {
         </div>
     </section>
 
-       {/* <!-- Contact Section --> */}
+    {/* Contact Section */}
     <section id="contacto" className="section contact">
         <div className="container">
             <h2 className="section-title">Contacto</h2>
@@ -470,7 +470,7 @@ function App() {
         </div>
     </section>
 
-    {/* <!-- Footer --> */}
+    {/* Footer */}
     <footer className="footer">
         <div className="container">
             <p>&copy; 2026 Juan David Rodriguez. Todos los derechos reservados.</p>
