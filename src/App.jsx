@@ -261,8 +261,8 @@ function App() {
                  <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">Proximamente</div>
-                        <h3 class="timeline-title">Futuras experiencias</h3>
+                        <div class="timeline-date">¿Tu empresa?</div>
+                        <h3 class="timeline-title">Abierto a nuevas oportunidades</h3>
                     </div>
                 </div>
 
@@ -329,7 +329,7 @@ function App() {
                                 <span className="skill-level">Intermedio</span>
                             </div>
                             <div className="skill-bar">
-                                <div className="skill-progress" style={{ width: '70%' }}></div>
+                                <div className="skill-progress" style={{ width: '60%' }}></div>
                             </div>
                         </div>
                         <div className="skill-item">
@@ -347,7 +347,7 @@ function App() {
                                 <span className="skill-level">Básico</span>
                             </div>
                             <div className="skill-bar">
-                                <div className="skill-progress" style={{ width: '50%' }}></div>
+                                <div className="skill-progress" style={{ width: '40%' }}></div>
                             </div>
                         </div>
                         <div className="skill-item">
@@ -356,7 +356,7 @@ function App() {
                                 <span className="skill-level">Básico</span>
                             </div>
                             <div className="skill-bar">
-                                <div className="skill-progress" style={{ width: '50%' }}></div>
+                                <div className="skill-progress" style={{ width: '40%' }}></div>
                             </div>
                         </div>
                         <div className="skill-item">
@@ -365,7 +365,7 @@ function App() {
                                 <span className="skill-level">Básico</span>
                             </div>
                             <div className="skill-bar">
-                                <div className="skill-progress" style={{ width: '45%' }}></div>
+                                <div className="skill-progress" style={{ width: '40%' }}></div>
                             </div>
                         </div>
                         <div className="skill-item">
