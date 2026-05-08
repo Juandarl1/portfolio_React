@@ -7,6 +7,8 @@ function App() {
   const [lang, setLang] = useState('es')
   const t = translations[lang]
 
+  const [menuOpen, setMenuOpen] = useState(false)
+
   useEffect(() => {
 
     // 1. Smooth scroll con offset para el navbar fijo
@@ -121,25 +123,35 @@ function App() {
     <>
 
       {/* NAV */}
-      <nav className="nav">
-        <div className="nav-container">
-          <div className="nav-brand">JDRL</div>
-          <div className="nav-links">
-            <a href="#sobre-mi"    className="nav-link">{t.nav.about}</a>
-            <a href="#experiencia" className="nav-link">{t.nav.experience}</a>
-            <a href="#habilidades" className="nav-link">{t.nav.skills}</a>
-            <a href="#educacion"   className="nav-link">{t.nav.education}</a>
-            <a href="#contacto"    className="nav-link nav-link-cta">{t.nav.contact}</a>
-            <button
-              onClick={() => setLang(lang === 'es' ? 'en' : 'es')}
-              className="lang-btn"
-            >
-              {lang === 'es' ? '🇺🇸 EN' : '🇨🇴 ES'}
-            </button>
-          </div>
+    <nav className="nav">
+      <div className="nav-container">
+        <div className="nav-brand">JDRL</div>
+    
+        {/* Botón hamburguesa — solo visible en mobile via CSS */}
+        <button
+          className="nav-toggle"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Menú"
+        >
+          <span></span>
+        </button>
+    
+        {/* Al hacer click se agrega/quita la clase "open" */}
+        <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
+          <a href="#sobre-mi"    className="nav-link" onClick={() => setMenuOpen(false)}>{t.nav.about}</a>
+          <a href="#experiencia" className="nav-link" onClick={() => setMenuOpen(false)}>{t.nav.experience}</a>
+          <a href="#habilidades" className="nav-link" onClick={() => setMenuOpen(false)}>{t.nav.skills}</a>
+          <a href="#educacion"   className="nav-link" onClick={() => setMenuOpen(false)}>{t.nav.education}</a>
+          <a href="#contacto"    className="nav-link nav-link-cta" onClick={() => setMenuOpen(false)}>{t.nav.contact}</a>
+          <button
+            onClick={() => { setLang(lang === 'es' ? 'en' : 'es'); setMenuOpen(false) }}
+            className="lang-btn"
+          >
+            {lang === 'es' ? '🇺🇸 EN' : '🇨🇴 ES'}
+          </button>
         </div>
-      </nav>
-
+      </div>
+    </nav>
       {/* HERO */}
       <section className="hero">
         <div className="hero-content">
