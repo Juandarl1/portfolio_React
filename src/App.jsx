@@ -184,8 +184,8 @@ function App() {
              <div className='hero-image-wrapper'>
             <div className='hero-image-frame'>
               <img
-                src="../src/assets/Foto.jpg"
-                alt="Foto de perfil de Juan David"
+                src="./images/Foto.jpg"
+                alt="./images/Foto.png"
                 className="hero-image"
               />
             </div>
