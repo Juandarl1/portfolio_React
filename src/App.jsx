@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { translations } from './translation'
 import './styles/global.css'
+import fotoJuan from '../images/Foto.jpg'
 
 function App() {
 
@@ -184,8 +185,8 @@ function App() {
              <div className='hero-image-wrapper'>
             <div className='hero-image-frame'>
               <img
-                src="./images/Foto.jpg"
-                alt="./images/Foto.png"
+                src={fotoJuan}
+                alt="Juan David Rodríguez Londoño"
                 className="hero-image"
               />
             </div>
