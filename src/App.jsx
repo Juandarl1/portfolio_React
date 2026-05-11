@@ -152,6 +152,8 @@ function App() {
         </div>
       </div>
     </nav>
+
+
       {/* HERO */}
       <section className="hero">
         <div className="hero-content">
@@ -177,7 +179,18 @@ function App() {
               GitHub
             </a>
           </div>
+          
         </div>
+             <div className='hero-image-wrapper'>
+            <div className='hero-image-frame'>
+              <img
+                src="../src/assets/Foto.jpg"
+                alt="Foto de perfil de Juan David"
+                className="hero-image"
+              />
+            </div>
+          </div>
+
       </section>
 
       {/* SOBRE MÍ */}

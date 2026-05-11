@@ -954,3 +954,45 @@ body {
   border-color: var(--color-primary);
   color: var(--color-primary-light);
 }
+
+/* Imagen */
+.hero-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInUp 0.8s ease-out 0.3s backwards;
+}
+
+.hero-image-frame {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  padding: 4px;
+  background: var(--gradient-primary);
+  box-shadow: 0 0 60px rgba(2, 2, 7, 0.4);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  /* Bordes desvanecidos */
+  mask-image: radial-gradient(circle, black 55%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle, black 55%, transparent 80%);
+}
+
+/* En mobile la imagen va arriba del texto */
+@media (max-width: 968px) {
+  .hero-image-wrapper {
+    order: -1;
+    margin-bottom: 2rem;
+  }
+
+  .hero-image-frame {
+    width: 200px;
+    height: 200px;
+  }
+}
