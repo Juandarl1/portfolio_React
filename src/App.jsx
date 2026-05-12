@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
-import { translations } from './translation'
+import { translations } from '../components/translations'
 import './styles/global.css'
 import fotoJuan from '../images/Foto.jpg'
+
 
 function App() {
 
@@ -122,8 +123,7 @@ function App() {
 
   return (
     <>
-
-      {/* NAV */}
+    {/* Nav */}
     <nav className="nav">
       <div className="nav-container">
         <div className="nav-brand">JDRL</div>
@@ -325,6 +325,9 @@ function App() {
         </div>
       </section>
 
+
+    {/* FIXME: Cambiar nivel por tecnologias que he trabajado, no se ve bien  */}
+
       {/* HABILIDADES */}
       <section id="habilidades" className="section skills">
         <div className="container">
@@ -398,6 +401,8 @@ function App() {
 
               </div>
             </div>
+              
+{/* Fixme / */}
 
             <div className="skill-category">
               <h3 className="skill-category-title">{t.skills.cat2}</h3>
