@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react'
 import { translations } from '../components/translations'
 import './styles/global.css'
-import fotoJuan from '../images/Foto.jpg'
 
+// Importa tu foto desde src/images/ (o cambia la ruta si la tienes en otro lugar)
+import fotoJuan from '../images/Foto.png'
 
 function App() {
 
-  const [lang, setLang] = useState('es')
-  const t = translations[lang]
-
+  const [lang, setLang]       = useState('es')
   const [menuOpen, setMenuOpen] = useState(false)
+  const [showCV, setShowCV]   = useState(false)
+  const t = translations[lang]
 
   useEffect(() => {
 
@@ -26,10 +27,7 @@ function App() {
     })
 
     // 2. Animación de barras de habilidades al hacer scroll
-    const observerOptions = {
-      threshold: 0.5,
-      rootMargin: '0px'
-    }
+    const observerOptions = { threshold: 0.5, rootMargin: '0px' }
 
     const animateSkillBars = (entries, observer) => {
       entries.forEach(entry => {
@@ -82,8 +80,8 @@ function App() {
       const scrollY = window.pageYOffset
       sections.forEach(section => {
         const sectionHeight = section.offsetHeight
-        const sectionTop = section.offsetTop - 100
-        const sectionId = section.getAttribute('id')
+        const sectionTop    = section.offsetTop - 100
+        const sectionId     = section.getAttribute('id')
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
           navLinks.forEach(link => {
             link.classList.remove('active')
@@ -119,43 +117,41 @@ function App() {
       }
     }
 
-  }, [lang]) // <- se re-ejecuta cuando cambia el idioma
+  }, [lang])
 
   return (
     <>
-    {/* Nav */}
-    <nav className="nav">
-      <div className="nav-container">
-        <div className="nav-brand">JDRL</div>
-    
-        {/* Botón hamburguesa — solo visible en mobile via CSS */}
-        <button
-          className="nav-toggle"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menú"
-        >
-          <span></span>
-        </button>
-    
-        {/* Al hacer click se agrega/quita la clase "open" */}
-        <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
-          <a href="#sobre-mi"    className="nav-link" onClick={() => setMenuOpen(false)}>{t.nav.about}</a>
-          <a href="#experiencia" className="nav-link" onClick={() => setMenuOpen(false)}>{t.nav.experience}</a>
-          <a href="#habilidades" className="nav-link" onClick={() => setMenuOpen(false)}>{t.nav.skills}</a>
-          <a href="#educacion"   className="nav-link" onClick={() => setMenuOpen(false)}>{t.nav.education}</a>
-          <a href="#contacto"    className="nav-link nav-link-cta" onClick={() => setMenuOpen(false)}>{t.nav.contact}</a>
+
+      {/* ── NAV ── */}
+      <nav className="nav">
+        <div className="nav-container">
+          <div className="nav-brand">JDRL</div>
+
           <button
-            onClick={() => { setLang(lang === 'es' ? 'en' : 'es'); setMenuOpen(false) }}
-            className="lang-btn"
+            className="nav-toggle"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menú"
           >
-            {lang === 'es' ? '🇺🇸 EN' : '🇨🇴 ES'}
+            <span></span>
           </button>
+
+          <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
+            <a href="#sobre-mi"    className="nav-link" onClick={() => setMenuOpen(false)}>{t.nav.about}</a>
+            <a href="#experiencia" className="nav-link" onClick={() => setMenuOpen(false)}>{t.nav.experience}</a>
+            <a href="#habilidades" className="nav-link" onClick={() => setMenuOpen(false)}>{t.nav.skills}</a>
+            <a href="#educacion"   className="nav-link" onClick={() => setMenuOpen(false)}>{t.nav.education}</a>
+            <a href="#contacto"    className="nav-link nav-link-cta" onClick={() => setMenuOpen(false)}>{t.nav.contact}</a>
+            <button
+              onClick={() => { setLang(lang === 'es' ? 'en' : 'es'); setMenuOpen(false) }}
+              className="lang-btn"
+            >
+              {lang === 'es' ? '🇺🇸 EN' : '🇨🇴 ES'}
+            </button>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-
-      {/* HERO */}
+      {/* ── HERO ── */}
       <section className="hero">
         <div className="hero-content">
           <div className="hero-badge">{t.hero.badge}</div>
@@ -166,11 +162,15 @@ function App() {
           <p className="hero-description">{t.hero.description}</p>
           <div className="hero-buttons">
             <a href="#contacto" className="btn btn-primary">{t.hero.btnContact}</a>
-            <a href="https://www.github.com/Juandarl1" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.github.com/Juandarl1"
+              className="btn btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="16" height="16"
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 style={{ marginRight: '8px', verticalAlign: 'middle' }}
@@ -180,21 +180,17 @@ function App() {
               GitHub
             </a>
           </div>
-          
         </div>
-             <div className='hero-image-wrapper'>
-            <div className='hero-image-frame'>
-              <img
-                src={fotoJuan}
-                alt="Juan David Rodríguez Londoño"
-                className="hero-image"
-              />
-            </div>
-          </div>
 
+        {/* Imagen hero */}
+        <div className="hero-image-wrapper">
+          <div className="hero-image-frame">
+            <img src={fotoJuan} alt="Juan David" className="hero-image" />
+          </div>
+        </div>
       </section>
 
-      {/* SOBRE MÍ */}
+      {/* ── SOBRE MÍ ── */}
       <section id="sobre-mi" className="section about">
         <div className="container">
           <h2 className="section-title">{t.about.title}</h2>
@@ -203,6 +199,14 @@ function App() {
               <p className="about-intro">{t.about.intro}</p>
               <p>{t.about.p2}</p>
               <p>{t.about.p3}</p>
+              {/* Botón para abrir el CV */}
+              <button
+                className="btn btn-secondary"
+                style={{ marginTop: '1rem' }}
+                onClick={() => setShowCV(true)}
+              >
+                📄 {t.about.cvBtn}
+              </button>
             </div>
             <div className="about-stats">
               <div className="stat-card">
@@ -222,7 +226,7 @@ function App() {
         </div>
       </section>
 
-      {/* EXPERIENCIA */}
+      {/* ── EXPERIENCIA ── */}
       <section id="experiencia" className="section experience">
         <div className="container">
           <h2 className="section-title">{t.experience.title}</h2>
@@ -278,7 +282,7 @@ function App() {
         </div>
       </section>
 
-      {/* EDUCACIÓN */}
+      {/* ── EDUCACIÓN ── */}
       <section id="educacion" className="section education">
         <div className="container">
           <h2 className="section-title">{t.education.title}</h2>
@@ -325,10 +329,7 @@ function App() {
         </div>
       </section>
 
-
-    {/* FIXME: Cambiar nivel por tecnologias que he trabajado, no se ve bien  */}
-
-      {/* HABILIDADES */}
+      {/* ── HABILIDADES ── */}
       <section id="habilidades" className="section skills">
         <div className="container">
           <h2 className="section-title">{t.skills.title}</h2>
@@ -401,8 +402,6 @@ function App() {
 
               </div>
             </div>
-              
-{/* Fixme / */}
 
             <div className="skill-category">
               <h3 className="skill-category-title">{t.skills.cat2}</h3>
@@ -452,7 +451,7 @@ function App() {
         </div>
       </section>
 
-      {/* CONTACTO */}
+      {/* ── CONTACTO ── */}
       <section id="contacto" className="section contact">
         <div className="container">
           <h2 className="section-title">{t.contact.title}</h2>
@@ -472,7 +471,12 @@ function App() {
                 <div className="contact-label">{t.contact.phoneLabel}</div>
                 <div className="contact-value">(+57) 305 2471550</div>
               </a>
-              <a href="https://www.linkedin.com/in/juan-david-rodriguez-londono/" target="_blank" rel="noopener noreferrer" className="contact-card">
+              <a
+                href="https://www.linkedin.com/in/juan-david-rodriguez-londono/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-card"
+              >
                 <div className="contact-icon">💼</div>
                 <div className="contact-label">LinkedIn</div>
                 <div className="contact-value">Juan David Rodriguez Londoño</div>
@@ -487,13 +491,31 @@ function App() {
         </div>
       </section>
 
-      {/* FOOTER */}
+      {/* ── FOOTER ── */}
       <footer className="footer">
         <div className="container">
           <p>{t.footer.rights}</p>
           <p className="footer-note">{t.footer.made}</p>
         </div>
       </footer>
+
+      {/* ── MODAL CV ── */}
+      {showCV && (
+        <div className="cv-overlay" onClick={() => setShowCV(false)}>
+          <div className="cv-modal" onClick={e => e.stopPropagation()}>
+            <div className="cv-modal-header">
+              <span>{t.about.cvTitle}</span>
+              <div className="cv-modal-actions">
+                <a href="/cv.pdf" download className="btn btn-primary">
+                  ⬇ {t.about.cvDownload}
+                </a>
+                <button className="cv-close" onClick={() => setShowCV(false)}>✕</button>
+              </div>
+            </div>
+            <iframe src="/cv.pdf" className="cv-iframe" title="CV" />
+          </div>
+        </div>
+      )}
 
     </>
   )
