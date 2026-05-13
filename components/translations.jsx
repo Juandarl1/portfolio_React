@@ -24,6 +24,10 @@ export const translations = {
       stat1: 'Años de experiencia',
       stat2: 'Tecnologías',
       stat3: 'Empresas',
+      // es
+      cvBtn: 'Ver CV'
+    
+
     },
     experience: {
       title: 'Experiencia',
@@ -137,6 +141,9 @@ export const translations = {
       stat1: 'Years of experience',
       stat2: 'Technologies',
       stat3: 'Companies',
+      // en
+      cvBtn: 'View CV'
+
     },
     experience: {
       title: 'Experience',
