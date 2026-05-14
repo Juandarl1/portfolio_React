@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import { translations } from '../components/translations'
 import './styles/global.css'
+import {Analytics} from '@vercel/analytics/react'
+
+
 
 // Importa tu foto desde src/images/ (o cambia la ruta si la tienes en otro lugar)
 import fotoJuan from '../images/Foto.png'
@@ -516,6 +519,10 @@ function App() {
           </div>
         </div>
       )}
+
+      {/* Analytics de vercel */}
+      <Analytics />
+
 
     </>
   )
