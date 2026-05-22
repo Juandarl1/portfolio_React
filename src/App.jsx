@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { translations } from '../components/translations'
 import './styles/global.css'
 import {Analytics} from '@vercel/analytics/react'
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 
 
@@ -522,7 +523,7 @@ function App() {
 
       {/* Analytics de vercel */}
       <Analytics />
-
+      <SpeedInsights />
 
     </>
   )
