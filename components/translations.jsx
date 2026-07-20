@@ -91,7 +91,7 @@ export const translations = {
       soft: {
         teamwork: 'Trabajo en equipo',
         resilient: 'Resiliente',
-        pressure: 'Trabajo bajo presión',
+        pressure: 'Adaptabilidad',
         communication: 'Comunicación asertiva',
         interpersonal: 'Relaciones interpersonales',
         technical: 'Conocimiento técnico',
@@ -113,7 +113,6 @@ export const translations = {
     },
     footer: {
       rights: '© 2026 Juan David Rodriguez. Todos los derechos reservados.',
-      made: 'Hecho con ❤️ y código',
     },
   },
 
@@ -207,7 +206,7 @@ export const translations = {
       soft: {
         teamwork: 'Teamwork',
         resilient: 'Resilient',
-        pressure: 'Works under pressure',
+        pressure: 'Adaptability',
         communication: 'Assertive communication',
         interpersonal: 'Interpersonal skills',
         technical: 'Technical knowledge',
@@ -229,7 +228,6 @@ export const translations = {
     },
     footer: {
       rights: '© 2026 Juan David Rodriguez. All rights reserved.',
-      made: 'Made with ❤️ and code',
     },
   },
 }

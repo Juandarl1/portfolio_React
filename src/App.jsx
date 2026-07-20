@@ -499,7 +499,6 @@ function App() {
       <footer className="footer">
         <div className="container">
           <p>{t.footer.rights}</p>
-          <p className="footer-note">{t.footer.made}</p>
         </div>
       </footer>
 
