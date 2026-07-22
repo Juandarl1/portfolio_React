@@ -13,7 +13,7 @@ export const translations = {
       badge: 'Disponible para oportunidades',
       greeting: 'Hola, soy',
       subtitle: 'Desarrollador de software',
-      description: 'Soy un Ingeniero y Tecnologo de Desarrollo de Software enfocado en crear soluciones eficientes y escalables. Cuento con conocimiento en AWS, Power BI, Análisis de Datos. Especializado en C#, Python, JavaScript y SQL Server.',
+      description: 'Soy Ingeniero y Tecnologo de Desarrollo de Software enfocado en crear soluciones eficientes y escalables. Cuento con conocimiento en AWS, Power BI, Análisis de Datos. Especializado en C#, Python, JavaScript y SQL Server.',
       btnContact: 'Contáctame',
     },
     about: {
