@@ -96,6 +96,22 @@ export const translations = {
         interpersonal: 'Relaciones interpersonales',
         technical: 'Conocimiento técnico',
       },
+      projects: {
+        title: 'Proyectos',
+        status: {
+          planning: 'En planificación',
+          development: 'En desarrollo',
+          completed: 'Finalizado',
+        },
+        project1: {
+          title: 'Portafolio personal',
+          description: 'Sitio web personal bilingüe para presentar mi experiencia, habilidades y trayectoria profesional.',
+        },
+        project2: {
+          title: 'Aplicación web de facturas online',
+          description: 'Aplicación web en planificación para crear facturas, guardar los registros en una base de datos como Supabase y mantenerlos disponibles tanto en línea como localmente.',
+        },
+      },
       languages: {
         spanish: 'Español',
         spanishLevel: 'Nativo',
@@ -210,6 +226,22 @@ export const translations = {
         communication: 'Assertive communication',
         interpersonal: 'Interpersonal skills',
         technical: 'Technical knowledge',
+      },
+      projects: {
+        title: 'Projects',
+        status: {
+          planning: 'Planning',
+          development: 'In development',
+          completed: 'Completed',
+        },
+        project1: {
+          title: 'Personal portfolio',
+          description: 'Bilingual personal website to present my experience, skills, and professional background.',
+        },
+        project2: {
+          title: 'Online invoicing web application',
+          description: 'A web application in planning that will allow users to create invoices, store records in a database such as Supabase, and keep them available both online and locally.',
+        },
       },
       languages: {
         spanish: 'Spanish',
