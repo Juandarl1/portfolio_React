@@ -30,31 +30,9 @@ function App() {
       })
     })
 
-    // 2. Animación de barras de habilidades al hacer scroll
+    // 2. Animación fade-up de tarjetas y timeline al hacer scroll
     const observerOptions = { threshold: 0.5, rootMargin: '0px' }
 
-    const animateSkillBars = (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const skillBars = entry.target.querySelectorAll('.skill-progress')
-          skillBars.forEach(bar => {
-            const width = bar.style.width
-            bar.style.width = '0%'
-            setTimeout(() => { bar.style.width = width }, 100)
-          })
-          observer.unobserve(entry.target)
-        }
-      })
-    }
-
-    const skillsSection = document.querySelector('.skills')
-    let skillsObserver = null
-    if (skillsSection) {
-      skillsObserver = new IntersectionObserver(animateSkillBars, observerOptions)
-      skillsObserver.observe(skillsSection)
-    }
-
-    // 3. Animación fade-up de tarjetas y timeline al hacer scroll
     const animateOnScroll = (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -76,7 +54,7 @@ function App() {
     const scrollObserver = new IntersectionObserver(animateOnScroll, observerOptions)
     scrollAnimateElements.forEach(el => scrollObserver.observe(el))
 
-    // 4. Nav link activo según la sección visible
+    // 3. Nav link activo según la sección visible
     const sections = document.querySelectorAll('section[id]')
     const navLinks = document.querySelectorAll('.nav-link')
 
@@ -99,7 +77,7 @@ function App() {
 
     window.addEventListener('scroll', setActiveNav)
 
-    // 5. Sombra del navbar al hacer scroll
+    // 4. Sombra del navbar al hacer scroll
     const nav = document.querySelector('.nav')
     const handleNavShadow = () => {
       if (nav) {
@@ -116,9 +94,7 @@ function App() {
     return () => {
       window.removeEventListener('scroll', setActiveNav)
       window.removeEventListener('scroll', handleNavShadow)
-      if (skillsObserver && skillsSection) {
-        skillsObserver.unobserve(skillsSection)
-      }
+      scrollObserver.disconnect()
     }
 
   }, [lang])
@@ -347,17 +323,11 @@ function App() {
                     <span className="skill-name">SQL Server</span>
                     <span className="skill-level">{t.skills.levels.intermediate}</span>
                   </div>
-                  <div className="skill-bar">
-                    <div className="skill-progress" style={{ width: '60%' }}></div>
-                  </div>
                 </div>
                 <div className="skill-item">
                   <div className="skill-header">
                     <span className="skill-name">C#</span>
                     <span className="skill-level">{t.skills.levels.basic}</span>
-                  </div>
-                  <div className="skill-bar">
-                    <div className="skill-progress" style={{ width: '50%' }}></div>
                   </div>
                 </div>
                 <div className="skill-item">
@@ -365,17 +335,11 @@ function App() {
                     <span className="skill-name">Python</span>
                     <span className="skill-level">{t.skills.levels.basic}</span>
                   </div>
-                  <div className="skill-bar">
-                    <div className="skill-progress" style={{ width: '40%' }}></div>
-                  </div>
                 </div>
                 <div className="skill-item">
                   <div className="skill-header">
                     <span className="skill-name">JavaScript</span>
                     <span className="skill-level">{t.skills.levels.basic}</span>
-                  </div>
-                  <div className="skill-bar">
-                    <div className="skill-progress" style={{ width: '40%' }}></div>
                   </div>
                 </div>
                 <div className="skill-item">
@@ -383,17 +347,11 @@ function App() {
                     <span className="skill-name">React</span>
                     <span className="skill-level">{t.skills.levels.basic}</span>
                   </div>
-                  <div className="skill-bar">
-                    <div className="skill-progress" style={{ width: '40%' }}></div>
-                  </div>
                 </div>
                 <div className="skill-item">
                   <div className="skill-header">
                     <span className="skill-name">Angular</span>
                     <span className="skill-level">{t.skills.levels.learning}</span>
-                  </div>
-                  <div className="skill-bar">
-                    <div className="skill-progress" style={{ width: '10%' }}></div>
                   </div>
                 </div>
 

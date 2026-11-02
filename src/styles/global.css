@@ -1,6 +1,6 @@
 :root {
-    /* Tema azul oscuro - morado degradado */
-    --color-bg-start: #0f172a;      /* Azul muy oscuro */
+    /* Tema azul grafito profesional */
+    --color-bg-start: #111827;      /* Azul grafito profesional */
     --color-bg-mid: #1e1b4b;        /* Azul-morado oscuro */
     --color-bg-end: #312e81;        /* Morado-azul */
     --color-primary: #6366f1;       /* Indigo vibrante */
@@ -13,7 +13,6 @@
     --color-border: #334155;        /* Borde sutil */
     
     --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-    --gradient-bg: linear-gradient(180deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
     --gradient-card: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
     
     --spacing-xs: 0.5rem;
@@ -22,8 +21,8 @@
     --spacing-lg: 4rem;
     --spacing-xl: 6rem;
     
-    --border-radius: 16px;
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --border-radius: 10px;
+    --transition: all 0.2s ease;
 }
 
 
@@ -43,7 +42,7 @@ html {
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     color: var(--color-text);
-    background: var(--gradient-bg);
+    background: var(--color-bg-start);
     background-attachment: fixed;
     line-height: 1.6;
     overflow-x: hidden;
@@ -137,7 +136,7 @@ body {
 
 .nav-link-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.18);
 }
 
 @media (max-width: 768px) {
@@ -347,9 +346,8 @@ body {
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.4);
-    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
 }
 
 .btn-secondary {
@@ -362,7 +360,7 @@ body {
     background: var(--gradient-primary);
     color: white;
     border-color: transparent;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 .hero-visual {
@@ -376,7 +374,7 @@ body {
     background: var(--color-card-bg);
     border-radius: var(--border-radius);
     padding: 1.5rem;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
     border: 1px solid var(--color-border);
     max-width: 500px;
     width: 100%;
@@ -477,7 +475,7 @@ body {
     padding: 2rem;
     border-radius: var(--border-radius);
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
     transition: var(--transition);
     border: 1px solid var(--color-border);
     position: relative;
@@ -495,8 +493,8 @@ body {
 }
 
 .stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.18);
     border-color: var(--color-primary);
 }
 
@@ -555,14 +553,14 @@ body {
     background: var(--color-card-bg);
     padding: 2rem;
     border-radius: var(--border-radius);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
     transition: var(--transition);
     border: 1px solid var(--color-border);
 }
 
 .timeline-content:hover {
-    transform: translateX(10px);
-    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
+    transform: translateX(2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.18);
     border-color: var(--color-primary);
 }
 
@@ -636,7 +634,7 @@ body {
     background: var(--color-card-bg);
     padding: 2.5rem;
     border-radius: var(--border-radius);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
     border: 1px solid var(--color-border);
 }
 
@@ -659,6 +657,13 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.skill-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
 .skill-header {
@@ -673,23 +678,12 @@ body {
 }
 
 .skill-level {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     color: var(--color-text-muted);
-}
-
-.skill-bar {
-    height: 8px;
-    background: rgba(99, 102, 241, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
     border: 1px solid var(--color-border);
-}
-
-.skill-progress {
-    height: 100%;
-    background: var(--gradient-primary);
-    border-radius: 10px;
-    transition: width 1s ease-out;
+    border-radius: 999px;
+    padding: 0.25rem 0.65rem;
+    white-space: nowrap;
 }
 
 .soft-skills {
@@ -709,7 +703,7 @@ body {
 }
 
 .soft-skill-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
     background: var(--gradient-primary);
     color: white;
     border-color: transparent;
@@ -744,9 +738,9 @@ body {
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
     border-color: var(--color-primary);
-    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.18);
 }
 
 .project-card-header {
@@ -830,7 +824,7 @@ body {
     background: var(--color-card-bg);
     padding: 2rem;
     border-radius: var(--border-radius);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
     display: flex;
     gap: 1.5rem;
     transition: var(--transition);
@@ -838,8 +832,8 @@ body {
 }
 
 .education-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.18);
     border-color: var(--color-primary);
 }
 
@@ -901,7 +895,7 @@ body {
     background: var(--color-card-bg);
     padding: 2rem;
     border-radius: var(--border-radius);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
     transition: var(--transition);
     text-decoration: none;
     color: inherit;
@@ -913,8 +907,8 @@ body {
 }
 
 .contact-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.18);
     border-color: var(--color-primary);
 }
 
@@ -1037,9 +1031,10 @@ body {
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  padding: 4px;
-  background: var(--gradient-primary);
-  box-shadow: 0 0 60px rgba(2, 2, 7, 0.4);
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  box-shadow: none;
 }
 
 .hero-image {
