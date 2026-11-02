@@ -437,6 +437,41 @@ function App() {
               </div>
             </div>
 
+            <div className="skill-category projects-category">
+              <h3 className="skill-category-title">{t.skills.projects.title}</h3>
+              <div className="projects-list">
+                <article className="project-card">
+                  <div className="project-card-header">
+                    <h4 className="project-title">{t.skills.projects.project1.title}</h4>
+                    <span className="project-status project-status-completed">
+                      {t.skills.projects.status.completed}
+                    </span>
+                  </div>
+                  <p className="project-description">{t.skills.projects.project1.description}</p>
+                </article>
+
+                <article className="project-card">
+                  <div className="project-card-header">
+                    <h4 className="project-title">{t.skills.projects.project2.title}</h4>
+                    <span className="project-status project-status-development">
+                      {t.skills.projects.status.development}
+                    </span>
+                  </div>
+                  <p className="project-description">{t.skills.projects.project2.description}</p>
+                </article>
+
+                <article className="project-card">
+                  <div className="project-card-header">
+                    <h4 className="project-title">{t.skills.projects.project3.title}</h4>
+                    <span className="project-status project-status-planning">
+                      {t.skills.projects.status.planning}
+                    </span>
+                  </div>
+                  <p className="project-description">{t.skills.projects.project3.description}</p>
+                </article>
+              </div>
+            </div>
+
             <div className="skill-category">
               <h3 className="skill-category-title">{t.skills.cat3}</h3>
               <div className="languages">

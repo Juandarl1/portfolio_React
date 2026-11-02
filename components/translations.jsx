@@ -96,6 +96,26 @@ export const translations = {
         interpersonal: 'Relaciones interpersonales',
         technical: 'Conocimiento técnico',
       },
+      projects: {
+        title: 'Proyectos',
+        status: {
+          planning: 'En planificación',
+          development: 'En desarrollo',
+          completed: 'Finalizado',
+        },
+        project1: {
+          title: 'Portafolio personal',
+          description: 'Sitio web personal bilingüe para presentar mi experiencia, habilidades y trayectoria profesional.',
+        },
+        project2: {
+          title: 'Dashboard de análisis de datos',
+          description: 'Proyecto en desarrollo para visualizar indicadores y facilitar la interpretación de información.',
+        },
+        project3: {
+          title: 'Aplicación de gestión',
+          description: 'Idea en planificación para centralizar procesos y mejorar el seguimiento de tareas.',
+        },
+      },
       languages: {
         spanish: 'Español',
         spanishLevel: 'Nativo',
@@ -210,6 +230,26 @@ export const translations = {
         communication: 'Assertive communication',
         interpersonal: 'Interpersonal skills',
         technical: 'Technical knowledge',
+      },
+      projects: {
+        title: 'Projects',
+        status: {
+          planning: 'Planning',
+          development: 'In development',
+          completed: 'Completed',
+        },
+        project1: {
+          title: 'Personal portfolio',
+          description: 'Bilingual personal website to present my experience, skills, and professional background.',
+        },
+        project2: {
+          title: 'Data analysis dashboard',
+          description: 'A project in development to visualize indicators and make information easier to interpret.',
+        },
+        project3: {
+          title: 'Management application',
+          description: 'An idea in planning to centralize processes and improve task tracking.',
+        },
       },
       languages: {
         spanish: 'Spanish',
