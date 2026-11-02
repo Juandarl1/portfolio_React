@@ -453,21 +453,11 @@ function App() {
                 <article className="project-card">
                   <div className="project-card-header">
                     <h4 className="project-title">{t.skills.projects.project2.title}</h4>
-                    <span className="project-status project-status-development">
-                      {t.skills.projects.status.development}
-                    </span>
-                  </div>
-                  <p className="project-description">{t.skills.projects.project2.description}</p>
-                </article>
-
-                <article className="project-card">
-                  <div className="project-card-header">
-                    <h4 className="project-title">{t.skills.projects.project3.title}</h4>
                     <span className="project-status project-status-planning">
                       {t.skills.projects.status.planning}
                     </span>
                   </div>
-                  <p className="project-description">{t.skills.projects.project3.description}</p>
+                  <p className="project-description">{t.skills.projects.project2.description}</p>
                 </article>
               </div>
             </div>

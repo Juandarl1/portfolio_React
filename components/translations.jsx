@@ -108,12 +108,8 @@ export const translations = {
           description: 'Sitio web personal bilingüe para presentar mi experiencia, habilidades y trayectoria profesional.',
         },
         project2: {
-          title: 'Dashboard de análisis de datos',
-          description: 'Proyecto en desarrollo para visualizar indicadores y facilitar la interpretación de información.',
-        },
-        project3: {
-          title: 'Aplicación de gestión',
-          description: 'Idea en planificación para centralizar procesos y mejorar el seguimiento de tareas.',
+          title: 'Aplicación web de facturas online',
+          description: 'Aplicación web en planificación para crear facturas, guardar los registros en una base de datos como Supabase y mantenerlos disponibles tanto en línea como localmente.',
         },
       },
       languages: {
@@ -243,12 +239,8 @@ export const translations = {
           description: 'Bilingual personal website to present my experience, skills, and professional background.',
         },
         project2: {
-          title: 'Data analysis dashboard',
-          description: 'A project in development to visualize indicators and make information easier to interpret.',
-        },
-        project3: {
-          title: 'Management application',
-          description: 'An idea in planning to centralize processes and improve task tracking.',
+          title: 'Online invoicing web application',
+          description: 'A web application in planning that will allow users to create invoices, store records in a database such as Supabase, and keep them available both online and locally.',
         },
       },
       languages: {
