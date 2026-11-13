@@ -116,7 +116,7 @@ export const translations = {
         spanish: 'Español',
         spanishLevel: 'Nativo',
         english: 'Inglés',
-        englishLevel: 'Intermedio (B1) "Consideración propia"',
+        englishLevel: 'B2 Intermedio Alto - EF SET',
       },
     },
     contact: {
@@ -247,7 +247,7 @@ export const translations = {
         spanish: 'Spanish',
         spanishLevel: 'Native',
         english: 'English',
-        englishLevel: 'Intermediate (B1) - Self assessment',
+        englishLevel: 'Intermediate (B2) - EF SET',
       },
     },
     contact: {
